@@ -1,0 +1,182 @@
+@import "ui";
+.gender {
+    padding: 100px 0;
+    a {
+        text-align: center;
+    }
+    p {
+        position: absolute;
+        width: 100%;
+        text-transform: uppercase;
+        bottom: 25%;
+        color: white;
+        font-family: Oswald;
+        font-size: 48px;
+        cursor: pointer;
+        letter-spacing: 0.05em;
+        span {
+            font-size: 24px;
+        }
+    }
+    img {
+        width: 100%;
+    }
+}
+
+
+.product,
+.recommended {
+    padding-bottom: 65px;
+    position: relative;
+    .category {
+        text-align: center;
+        .btn {
+            text-transform: uppercase;
+            margin: 0 15px;
+        }
+    }
+    .carousel {
+        position: initial;
+        .carousel-control {
+            background: transparent !important;
+            width: 87px;
+            display: flex;
+            align-items: center;
+            opacity: 1 !important;
+            .arrow {
+                .size(87px, 160px);
+                background: url(../img/carousel-arrow.png)no-repeat center;
+                .transition(background);
+                &:hover {
+                    background-image: url(../img/carousel-arrow-hover.png);
+                    background-color: black;
+                }
+            }
+            &.left {
+                left: 0;
+                transform: rotate(180deg);
+            }
+            &.right {
+                right: 17px;
+            }
+        }
+        .item {
+            padding: 25px 0;
+        }
+    }
+}
+
+.follow-us {
+    background: url(../img/home/follow-back.png)no-repeat center;
+    padding: 200px 0;
+    .title {
+        color: white;
+    }
+    .links {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+.blog-lattest {
+    padding: 100px 0;
+    .item {
+        img {
+            margin-bottom: 15px;
+            display: block;
+        }
+        .date {
+            color: @gray;
+        }
+        .name {
+            text-transform: uppercase;
+            font-family: Oswald;
+        }
+        .description{
+            margin: 15px 0;
+        }
+        .btn {
+            padding: 9px 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .product,
+    .recommended {
+        .cart {
+            margin-bottom: 15px;
+            &:nth-child(3) {
+                clear: both;
+            }
+        }
+    }
+    .blog-lattest{
+        .item{
+            margin-bottom: 25px;
+        }
+    }
+    .follow-us{
+        padding: 100px 0;
+    }
+    .blog-lattest{
+        padding: 50px 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .gender {
+        padding: 25px 0;
+        a:first-child img {
+            margin-bottom: 15px;
+        }
+    }
+    .title {
+        margin-bottom: 25px;
+        font-size: 30px;
+    }
+    .product,
+    .recommended {
+        padding-bottom: 10px;
+        .category {
+            .btn {
+                margin-bottom: 10px;
+            }
+        }
+        .carousel{
+            .carousel-control {
+                &.right{
+                    right: 0;
+                }
+            }
+        }
+        
+    }
+    .follow-us{
+        padding: 50px 0;
+        .links{
+            flex-direction: column;
+            a{
+                margin-bottom: 15px;
+            }
+        }
+    }
+    .blog-lattest{
+        padding: 25px 0;
+        .item{
+            max-width: 400px;
+        margin: 15px auto;
+        }
+    }
+    footer{
+        text-align: center;
+        padding-top: 25px;
+        .menu-title{
+            margin-bottom: 15px;
+        }
+        hr{
+            margin-top: 15px;
+        }
+    }
+}
