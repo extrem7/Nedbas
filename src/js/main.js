@@ -46,12 +46,29 @@ $('header .toggle-btn').click(function () {
 });
 
 const filter_category = {
-    controller: function () {
-        $('.category .open-dropdown .mdi').click(function () {
-            $(this).toggleClass('open');
-            $(this).parent().parent().next('.dropdown').slideToggle().css("display","flex");
-        })
-    }
-}
+        controller: function () {
+            $('.category .open-dropdown .mdi').click(function () {
+                $(this).toggleClass('open');
+                $(this).parent().parent().next('.dropdown').slideToggle().css("display", "flex");
+            })
+        }
+    },
+    item_shop = {
+        controller: function () {
+            $('.miniatures img').click(function () {
+                let src = $(this).attr('src');
+                $('.big').fadeOut('fast',function(){
+                    $(this).attr('src',src);
+                    $(this).fadeIn();
+                })
+            });
+            $('.mdi-heart-outline').click(function(e){
+                e.preventDefault();
+                $(this).toggleClass('active');
+            })
+        }
+    };
+
 
 filter_category.controller();
+item_shop.controller();

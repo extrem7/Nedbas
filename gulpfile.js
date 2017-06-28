@@ -8,6 +8,8 @@ const gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     rimraf = require('rimraf'),
+    gutil = require('gulp-util'),
+    ftp = require('vinyl-ftp'),
     browserSync = require('browser-sync').create(),
     reload = browserSync.reload;
 
@@ -46,13 +48,32 @@ const config = {
     logPrefix: "Yurka"
 };
 
+const ftpConnection = ftp.create({
+    host: "zzz.com.ua",
+    user: "extrem7",
+    password: "2705921ua",
+    parallel: 3,
+    log: gutil.log
+});
+
+const globs = ['./build/**'];
+
+gulp.task('ftp:send', function () {
+    gulp.src(globs, {
+            base: './build',
+            buffer: false
+        })
+        .pipe(ftpConnection.newer('/nedbas.zzz.com.ua'))
+        .pipe(ftpConnection.dest('/nedbas.zzz.com.ua'))
+});
+
 gulp.task('html:build', function () {
-    gulp.src(path.src.html) //Выберем файлы по нужному пути
-        .pipe(rigger()) //Прогоним через rigger
-        .pipe(gulp.dest(path.build.html)) //Выплюнем их в папку build
+    gulp.src(path.src.html)
+        .pipe(rigger())
+        .pipe(gulp.dest(path.build.html))
         .pipe(reload({
             stream: true
-        })); //И перезагрузим наш сервер для обновлений
+        }));
 });
 
 gulp.task('css:build', function () {
@@ -71,17 +92,17 @@ gulp.task('css:build', function () {
 });
 
 gulp.task('image:build', function () {
-    gulp.src(path.src.img) //Выберем наши картинки
-        .pipe(imagemin({ //Сожмем их
+    gulp.src(path.src.img)
+        .pipe(imagemin({
             progressive: true,
-        optimizationLevel: 10,
+            optimizationLevel: 10,
             svgoPlugins: [{
                 removeViewBox: false
             }],
             use: [pngquant()],
             interlaced: true
         }))
-        .pipe(gulp.dest(path.build.img)) //И бросим в build
+        .pipe(gulp.dest(path.build.img))
         .pipe(reload({
             stream: true
         }));
@@ -98,6 +119,7 @@ gulp.task('js:build', function () {
 });
 
 gulp.task('build', [
+    'clean',
     'html:build',
     'js:build',
     'css:build',
@@ -131,4 +153,4 @@ gulp.task('clean', function (cb) {
     rimraf(path.clean, cb);
 });
 
-gulp.task('run', ['webserver','watch']);
+gulp.task('default', ['webserver', 'watch']);

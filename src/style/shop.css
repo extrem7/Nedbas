@@ -201,6 +201,161 @@
   flex-wrap: wrap;
   max-height: 120px;
 }
+.single {
+  padding: 100px 0;
+}
+.single .item {
+  margin-bottom: 90px;
+}
+.single .item .photo {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.single .item .photo .miniatures {
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.single .item .photo .miniatures img {
+  cursor: pointer;
+}
+.single .item .photo .big {
+  width: 83%;
+}
+.single .item .description .head {
+  margin-bottom: 40px;
+}
+.single .item .description .head > div {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+.single .item .description .head .price {
+  font-size: 18px;
+  margin-right: 10px;
+}
+.single .item .description .head .price.actual {
+  color: #cb1515;
+}
+.single .item .description .head .old {
+  text-decoration: line-through;
+  color: black;
+}
+.single .item .description .head .rate .stars {
+  margin-right: 10px;
+  display: inline-block;
+}
+.single .item .description .head .rate .stars i {
+  margin: -2px;
+}
+.single .item .description .head .rate .stars i.not {
+  color: #dddddd;
+}
+.single .item .description .head .rate .answers {
+  color: #9a9a9a;
+}
+.single .item .description .order {
+  margin-top: 20px;
+}
+.single .item .description .order label {
+  display: block;
+  font-weight: normal;
+}
+.single .item .description .order select {
+  margin-bottom: 15px;
+  height: 28px;
+  width: 194px;
+  border: 1px solid black;
+}
+.single .item .description .buy input[type=number] {
+  height: 44px;
+  width: 53px;
+  border: 1px solid black;
+  text-align: center;
+  margin-right: 15px;
+}
+.single .item .description .buy .add {
+  padding: 12px 30px;
+  background: black;
+  color: white;
+  margin-right: 15px;
+}
+.single .item .description .buy .mdi {
+  background: transparent;
+  font-size: 30px;
+  position: relative;
+  top: 5px;
+}
+.single .item .description .buy .mdi.active:before {
+  content: "\F2D1";
+}
+.single .item .description .additional {
+  margin: 40px 0 20px;
+}
+.single .item .description .additional span {
+  display: block;
+  color: #9a9a9a;
+  line-height: 1.6;
+}
+.single .item .description .additional span a {
+  color: black;
+}
+.single .item .description .social span {
+  display: block;
+}
+.single .item .description .social div {
+  align-items: center;
+  display: flex;
+  width: 140px;
+  position: relative;
+  top: -10px;
+}
+.single .item .description .social a {
+  font-size: 24px;
+  margin: 0 auto;
+}
+.single .item .description .social a:nth-child(2) {
+  font-size: 36px;
+}
+.single .tabs .controll {
+  font-family: Oswald;
+  text-transform: uppercase;
+  display: flex;
+  border-bottom: 1px solid #dddddd;
+}
+.single .tabs .controll li {
+  width: 130px;
+  padding-bottom: 15px;
+  text-align: center;
+  color: #9a9a9a;
+}
+.single .tabs .controll li.active {
+  border-bottom: 1px solid black;
+  color: black;
+}
+.single .tabs #description {
+  padding: 25px 0;
+}
+.single .tabs #options table {
+  width: 100%;
+}
+.single .tabs #options table tr {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 1px;
+}
+.single .tabs #options table td {
+  padding: 15px 0 15px 15px;
+  background: #f5f5f5;
+  width: 75%;
+}
+.single .tabs #options table td:first-child {
+  width: 25%;
+  margin-right: 1px;
+}
 @media screen and (max-width: 767px) {
   .catalog {
     padding: 25px 0;

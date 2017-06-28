@@ -154,6 +154,10 @@ header .menu > li:hover,
 .navbar-fixed-top .menu > li:hover {
   border-bottom: 1px solid black;
 }
+header .menu > li:last-child:hover,
+.navbar-fixed-top .menu > li:last-child:hover {
+  border: none;
+}
 header .menu > li > a,
 .navbar-fixed-top .menu > li > a {
   letter-spacing: 0.1em;
@@ -359,7 +363,7 @@ header .dropdown-menu li.margin,
   right: 5%;
   font-size: 24px;
 }
-.cart .photo .mdi-heart-outline:hover:before {
+.cart .photo .mdi-heart-outline.active:before {
   content: "\F2D1";
 }
 .cart .name {

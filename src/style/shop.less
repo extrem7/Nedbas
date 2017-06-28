@@ -210,6 +210,172 @@
     }
 }
 
+.single {
+    padding: 100px 0;
+    .item {
+        margin-bottom: 90px;
+        .photo {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            .miniatures {
+                width: 15%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                img {
+                    cursor: pointer;
+                }
+            }
+            .big {
+                width: 83%;
+            }
+        }
+        .description {
+            .head {
+                margin-bottom: 40px;
+                &>div {
+                    display: flex;
+                    align-items: baseline;
+                    margin-bottom: 10px;
+                }
+                .price {
+                    font-size: 18px;
+                    margin-right: 10px;
+                    &.actual {
+                        color: #cb1515;
+                    }
+                }
+                .old {
+                    text-decoration: line-through;
+                    color: black;
+                }
+                .rate {
+                    .stars {
+                        margin-right: 10px;
+                        display: inline-block;
+                        i {
+                            margin: -2px;
+                            &.not {
+                                color: #dddddd;
+                            }
+                        }
+                    }
+                    .answers {
+                        color: @gray;
+                    }
+                }
+            }
+            .order {
+                margin-top: 20px;
+                label {
+                    display: block;
+                    font-weight: normal;
+                }
+                select {
+                    margin-bottom: 15px;
+                    .size(194px, 28px);
+                    border: 1px solid black;
+                }
+            }
+            .buy {
+                input[type=number] {
+                    .size(53px, 44px);
+                    border: 1px solid black;
+                    text-align: center;
+                    margin-right: 15px;
+                }
+                .add {
+                    padding: 12px 30px;
+                    background: black;
+                    color: white;
+                    margin-right: 15px;
+                }
+                .mdi {
+                    background: transparent;
+                    font-size: 30px;
+                    position: relative;
+                    top: 5px;
+                    &.active:before {
+                        content: "\F2D1";
+                    }
+                }
+            }
+            .additional {
+                margin: 40px 0 20px;
+                span {
+                    display: block;
+                    color: @gray;
+                    line-height: 1.6;
+                    a {
+                        color: black;
+                    }
+                }
+            }
+            .social {
+                span {
+                    display: block;
+                }
+                div {
+                    align-items: center;
+                    display: flex;
+                    width: 140px;
+                    position: relative;
+                    top: -10px;
+                }
+                a {
+                    font-size: 24px;
+                    margin: 0 auto;
+                    &:nth-child(2) {
+                        font-size: 36px;
+                    }
+                }
+            }
+        }
+    }
+    .tabs {
+        .controll {
+            font-family: Oswald;
+            text-transform: uppercase;
+            display: flex;
+            border-bottom: 1px solid #dddddd;
+            li {
+                width: 130px;
+                padding-bottom: 15px;
+                text-align: center;
+                color: #9a9a9a;
+                &.active {
+                    border-bottom: 1px solid black;
+                    color: black;
+                }
+            }
+        }
+        #description{
+            padding: 25px 0;
+        }
+        #options{
+            table{
+                width: 100%;
+                tr{
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                    margin-bottom: 1px;
+                }
+                td{
+                    padding: 15px 0 15px 15px;
+                    background: #f5f5f5;
+                    width: 75%;
+                    &:first-child{
+                        width: 25%;
+                        margin-right: 1px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width:767px) {
     .catalog {
         padding: 25px 0;
@@ -223,7 +389,7 @@
                 order: 1;
             }
         }
-        .filters{
+        .filters {
             margin-bottom: 15px;
         }
         .cart {

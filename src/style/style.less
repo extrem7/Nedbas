@@ -102,6 +102,9 @@ header,
             &:hover {
                 border-bottom: 1px solid black;
             }
+            &:last-child:hover{
+                border: none;
+            }
             &>a {
                 letter-spacing: 0.1em;
             }
@@ -289,7 +292,7 @@ header,
             top: 2%;
             right: 5%;
             font-size: 24px;
-            &:hover:before {
+            &.active:before {
                 content: "\F2D1";
             }
         }
