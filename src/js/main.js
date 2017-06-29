@@ -49,7 +49,7 @@ const filter_category = {
         controller: function () {
             $('.category .open-dropdown .mdi').click(function () {
                 $(this).toggleClass('open');
-                $(this).parent().parent().next('.dropdown').slideToggle().css("display", "flex");
+                $(this).parent().parent().parent().next('li').find('> .dropdown').slideToggle().css("display", "flex");
             })
         }
     },
@@ -62,9 +62,18 @@ const filter_category = {
                     $(this).fadeIn();
                 })
             });
+            $('.item .head .answers').click(function(e){
+                e.preventDefault();
+                $('.tabs .controll a[href="#answers"]').click();
+                $('body').animate({scrollTop:$('.tabs').offset().top-100},1500);
+            })
             $('.mdi-heart-outline').click(function(e){
                 e.preventDefault();
                 $(this).toggleClass('active');
+            });
+            $('.form i').click(function(){
+                $('form i').removeClass('active');
+                $(this).addClass('active').prevAll().addClass('active');
             })
         }
     };

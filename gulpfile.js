@@ -119,7 +119,6 @@ gulp.task('js:build', function () {
 });
 
 gulp.task('build', [
-    'clean',
     'html:build',
     'js:build',
     'css:build',

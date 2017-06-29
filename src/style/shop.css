@@ -80,16 +80,17 @@
 .catalog .filters .category .item {
   display: block;
 }
-.catalog .filters .category li {
+.catalog .filters .category li .item {
+  padding: 10px 14px;
+  height: 40px;
   display: block;
   position: relative;
-  padding: 10px 14px;
   transition: all 0.3s ease-in-out;
 }
-.catalog .filters .category li:hover {
+.catalog .filters .category li .item:hover {
   background: black;
 }
-.catalog .filters .category li:hover .left {
+.catalog .filters .category li .item:hover .left {
   color: white;
 }
 .catalog .filters .category .dropdown {
@@ -185,6 +186,7 @@
   border-radius: 50%;
   height: 10px;
   width: 10px;
+  cursor: pointer;
 }
 .catalog .filters .another .color ul {
   display: flex;
@@ -223,6 +225,7 @@
 }
 .single .item .photo .big {
   width: 83%;
+  object-fit: contain;
 }
 .single .item .description .head {
   margin-bottom: 40px;
@@ -242,16 +245,6 @@
 .single .item .description .head .old {
   text-decoration: line-through;
   color: black;
-}
-.single .item .description .head .rate .stars {
-  margin-right: 10px;
-  display: inline-block;
-}
-.single .item .description .head .rate .stars i {
-  margin: -2px;
-}
-.single .item .description .head .rate .stars i.not {
-  color: #dddddd;
 }
 .single .item .description .head .rate .answers {
   color: #9a9a9a;
@@ -356,6 +349,144 @@
   width: 25%;
   margin-right: 1px;
 }
+.single .tabs #answers .items {
+  padding: 50px 0 0;
+}
+.single .tabs #answers .item {
+  margin-bottom: -5px;
+}
+.single .tabs #answers .head {
+  display: flex;
+  align-items: flex-start;
+}
+.single .tabs #answers .avatar {
+  z-index: 2;
+}
+.single .tabs #answers .avatar-mobile {
+  display: none;
+}
+.single .tabs #answers .stars {
+  margin-left: 15px;
+}
+.single .tabs #answers .name {
+  margin: 0 15px;
+}
+.single .tabs #answers .date {
+  color: #9a9a9a;
+}
+.single .tabs #answers .text {
+  background: #f5f5f5;
+  padding: 25px 30px;
+  margin: 0 40px;
+  position: relative;
+  top: -35px;
+}
+.single .tabs #answers .form p {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  font-family: Oswald;
+}
+.single .tabs #answers .form input[type=text],
+.single .tabs #answers .form input[type=email] {
+  margin-right: 15px;
+  height: 28px;
+  width: 264px;
+}
+.single .tabs #answers .form input[type=text],
+.single .tabs #answers .form input[type=email],
+.single .tabs #answers .form textarea {
+  padding-left: 8px;
+  margin-bottom: 10px;
+}
+.single .tabs #answers .form input[type=text]::-webkit-input-placeholder,
+.single .tabs #answers .form input[type=email]::-webkit-input-placeholder,
+.single .tabs #answers .form textarea::-webkit-input-placeholder {
+  color: black;
+}
+.single .tabs #answers .form input[type=text]::-moz-placeholder,
+.single .tabs #answers .form input[type=email]::-moz-placeholder,
+.single .tabs #answers .form textarea::-moz-placeholder {
+  color: black;
+}
+.single .tabs #answers .form input[type=text]:-ms-input-placeholder,
+.single .tabs #answers .form input[type=email]:-ms-input-placeholder,
+.single .tabs #answers .form textarea:-ms-input-placeholder {
+  color: black;
+}
+.single .tabs #answers .form textarea {
+  width: 100%;
+  resize: none;
+  height: 70px;
+}
+.single .tabs #answers .form .stars {
+  cursor: pointer;
+}
+.single .tabs #answers .form .stars i {
+  color: #9a9a9a;
+}
+.single .tabs #answers .form .stars i:hover {
+  color: rgba(0, 0, 0, 0.7) !important;
+}
+.single .tabs #answers .form .stars i.active {
+  color: black;
+}
+.single .also,
+.single .last-seen {
+  padding: 50px 0;
+}
+.single .also p,
+.single .last-seen p {
+  font-family: Oswald;
+  font-size: 18px;
+  margin-bottom: 25px;
+  padding-left: 15px;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 1200px) {
+  .single .item .photo .miniatures {
+    justify-content: center;
+  }
+  .single .item .photo .miniatures img {
+    margin: 6px 0;
+  }
+}
+@media screen and (max-width: 991px) {
+  .single {
+    padding: 50px 0;
+  }
+  .single .title {
+    margin-bottom: 50px;
+  }
+  .single .item {
+    margin-bottom: 25px;
+  }
+  .single .photo {
+    margin-bottom: 15px;
+  }
+  .single .description {
+    text-align: center;
+  }
+  .single .description .head div {
+    justify-content: center;
+  }
+  .single .description .social div {
+    width: 100%!important;
+    justify-content: center!important;
+  }
+  .single .description .social div a {
+    margin: 0 5px!important;
+  }
+  .single .tabs .controll {
+    justify-content: center;
+  }
+  .single .tabs #answers .form .head {
+    display: block;
+  }
+  .single .tabs #answers .form .head input[type=text] {
+    display: block;
+  }
+}
 @media screen and (max-width: 767px) {
   .catalog {
     padding: 25px 0;
@@ -376,5 +507,80 @@
   .catalog .cart {
     width: 320px;
     margin: 15px auto;
+  }
+  .single {
+    padding: 25px 0;
+  }
+  .single .title {
+    margin-bottom: 25px;
+  }
+  .single .item .photo {
+    flex-direction: column-reverse;
+  }
+  .single .item .photo .big {
+    width: 100%;
+  }
+  .single .item .photo .miniatures {
+    justify-content: space-between;
+    margin-top: 5px;
+    width: 100%;
+    flex-direction: row;
+  }
+  .single .item .photo .miniatures img {
+    height: 25vw;
+  }
+  .single .item .description .buy input[type=number] {
+    display: block;
+    margin-right: 0;
+    margin: 0 auto;
+  }
+  .single .item .description .buy .add {
+    margin-top: 15px;
+  }
+  .single .tabs #options {
+    overflow-x: scroll;
+  }
+  .single .tabs #options table {
+    width: 500px;
+  }
+  .single .tabs #answers .item {
+    margin-bottom: 15px;
+  }
+  .single .tabs #answers .item .head {
+    display: inline-flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  .single .tabs #answers .item .head .name,
+  .single .tabs #answers .item .head .stars,
+  .single .tabs #answers .item .head .date {
+    margin: 0;
+  }
+  .single .tabs #answers .item .head .stars {
+    order: 1;
+  }
+  .single .tabs #answers .item .head .date {
+    order: 2;
+  }
+  .single .tabs #answers .item .avatar {
+    display: none;
+  }
+  .single .tabs #answers .item .avatar-mobile {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+  }
+  .single .tabs #answers .text {
+    top: 0;
+    margin: 0;
+  }
+  .single .tabs #answers .form {
+    text-align: center;
+  }
+  .single .tabs #answers .form .head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
   }
 }

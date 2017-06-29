@@ -79,14 +79,17 @@
                 display: block;
             }
             li {
-                display: block;
-                position: relative;
-                padding: 10px 14px;
-                .transition(all);
-                &:hover {
-                    background: black;
-                    .left {
-                        color: white;
+                .item {
+                    padding: 10px 14px;
+                    height: 40px;
+                    display: block;
+                    position: relative;
+                    .transition(all);
+                    &:hover {
+                        background: black;
+                        .left {
+                            color: white;
+                        }
                     }
                 }
             }
@@ -185,6 +188,7 @@
                     background: black;
                     border-radius: 50%;
                     .size(10px);
+                    cursor: pointer;
                 }
             }
             .color {
@@ -229,6 +233,7 @@
             }
             .big {
                 width: 83%;
+                object-fit: contain;
             }
         }
         .description {
@@ -251,16 +256,6 @@
                     color: black;
                 }
                 .rate {
-                    .stars {
-                        margin-right: 10px;
-                        display: inline-block;
-                        i {
-                            margin: -2px;
-                            &.not {
-                                color: #dddddd;
-                            }
-                        }
-                    }
                     .answers {
                         color: @gray;
                     }
@@ -350,25 +345,173 @@
                 }
             }
         }
-        #description{
+        #description {
             padding: 25px 0;
         }
-        #options{
-            table{
+        #options {
+            table {
                 width: 100%;
-                tr{
+                tr {
                     display: flex;
                     width: 100%;
                     justify-content: space-between;
                     margin-bottom: 1px;
                 }
-                td{
+                td {
                     padding: 15px 0 15px 15px;
                     background: #f5f5f5;
                     width: 75%;
-                    &:first-child{
+                    &:first-child {
                         width: 25%;
                         margin-right: 1px;
+                    }
+                }
+            }
+        }
+        #answers {
+            .items {
+                padding: 50px 0 0;
+            }
+            .item {
+                margin-bottom: -5px;
+            }
+            .head {
+                display: flex;
+                align-items: flex-start;
+            }
+            .avatar {
+                z-index: 2;
+                &-mobile {
+                    display: none;
+                }
+            }
+            .stars {
+                margin-left: 15px;
+            }
+            .name {
+                margin: 0 15px;
+            }
+            .date {
+                color: @gray;
+            }
+            .text {
+                background: #f5f5f5;
+                padding: 25px 30px;
+                margin: 0 40px;
+                position: relative;
+                top: -35px;
+            }
+            .form {
+                p {
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    margin-bottom: 15px;
+                    font-family: Oswald;
+                }
+                input[type=text],
+                input[type=email] {
+                    margin-right: 15px;
+                    .size(264px, 28px);
+                }
+                input[type=text],
+                input[type=email],
+                textarea {
+                    padding-left: 8px;
+                    margin-bottom: 10px;
+                    &::-webkit-input-placeholder {
+                        color: black;
+                    }
+                    &::-moz-placeholder {
+                        color: black;
+                    }
+                    &:-ms-input-placeholder {
+                        color: black;
+                    }
+                }
+                textarea {
+                    width: 100%;
+                    resize: none;
+                    height: 70px;
+                }
+                .stars {
+                    cursor: pointer;
+                    i {
+                        color: @gray;
+                        &:hover {
+                            color: rgba(0, 0, 0, .7)!important;
+                        }
+                        &.active {
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .also,
+    .last-seen {
+        p {
+            font-family: Oswald;
+            font-size: 18px;
+            margin-bottom: 25px;
+            padding-left: 15px;
+            text-transform: uppercase;
+        }
+        padding: 50px 0;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .single {
+        .item {
+            .photo {
+                .miniatures {
+                    justify-content: center;
+                    img {
+                        margin: 6px 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:991px) {
+    .single {
+        padding: 50px 0;
+        .title {
+            margin-bottom: 50px;
+        }
+        .item {
+            margin-bottom: 25px;
+        }
+        .photo {
+            margin-bottom: 15px;
+        }
+        .description {
+            text-align: center;
+            .head div {
+                justify-content: center;
+            }
+            .social div {
+                width: 100%!important;
+                justify-content: center!important;
+                a {
+                    margin: 0 5px!important;
+                }
+            }
+        }
+        .tabs {
+            .controll {
+                justify-content: center;
+            }
+            #answers {
+                .form {
+                    .head {
+                        display: block;
+                        input[type=text] {
+                            display: block;
+                        }
                     }
                 }
             }
@@ -395,6 +538,91 @@
         .cart {
             width: 320px;
             margin: 15px auto;
+        }
+    }
+    .single {
+        padding: 25px 0;
+        .title {
+            margin-bottom: 25px;
+        }
+        .item {
+            .photo {
+                flex-direction: column-reverse;
+                .big {
+                    width: 100%;
+                }
+                .miniatures {
+                    justify-content: space-between;
+                    margin-top: 5px;
+                    width: 100%;
+                    flex-direction: row;
+                    img {
+                        height: 25vw;
+                    }
+                }
+            }
+            .description {
+                .buy {
+                    input[type=number] {
+                        display: block;
+                        margin-right: 0;
+                        margin: 0 auto;
+                    }
+                    .add {
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+        .tabs {
+            #options {
+                overflow-x: scroll;
+                table {
+                    width: 500px;
+                }
+            }
+            #answers {
+                .item {
+                    margin-bottom: 15px;
+                    .head {
+                        display: inline-flex;
+                        flex-direction: column;
+                        margin-bottom: 10px;
+                        .name,
+                        .stars,
+                        .date {
+                            margin: 0;
+                        }
+                        .stars {
+                            order: 1;
+                        }
+                        .date {
+                            order: 2;
+                        }
+                    }
+                    .avatar {
+                        display: none;
+                        &-mobile {
+                            display: inline-block;
+                            vertical-align: top;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+                .text {
+                    top: 0;
+                    margin: 0;
+                }
+                .form {
+                    text-align: center;
+                    .head {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        margin-bottom: 15px;
+                    }
+                }
+            }
         }
     }
 }

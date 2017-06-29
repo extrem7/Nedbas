@@ -102,7 +102,7 @@ header,
             &:hover {
                 border-bottom: 1px solid black;
             }
-            &:last-child:hover{
+            &:last-child:hover {
                 border: none;
             }
             &>a {
@@ -312,18 +312,20 @@ header,
         }
     }
     .rate {
-        .stars {
-            margin-right: 5px;
-            display: inline-block;
-            i {
-                margin: -2px;
-                &.not {
-                    color: #dddddd;
-                }
-            }
-        }
         .answers {
             color: @gray;
+        }
+    }
+}
+
+.stars {
+    margin-right: 10px;
+    display: inline-block;
+    width: 80px;
+    i {
+        margin: -2px;
+        &.not {
+            color: #dddddd;
         }
     }
 }
@@ -405,6 +407,16 @@ footer {
     }
 }
 
+.border {
+    border: 1px solid black;
+}
+
+.btn-black {
+    padding: 12px 30px;
+    background: black;
+    color: white;
+}
+
 @media screen and (max-width: 991px) {
     .navbar-fixed-top {
         .menu>li {
@@ -482,14 +494,14 @@ footer {
     .navbar-fixed-top {
         padding: 10px 0;
     }
-    footer{
+    footer {
         text-align: center;
         padding-top: 15px;
-        .menu-title{
+        .menu-title {
             margin-bottom: 15px;
             margin-top: 15px;
         }
-        hr{
+        hr {
             margin-top: 15px;
         }
     }

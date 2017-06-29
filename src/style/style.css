@@ -380,18 +380,19 @@ header .dropdown-menu li.margin,
 .cart .price span {
   color: #cb1515;
 }
-.cart .rate .stars {
-  margin-right: 5px;
-  display: inline-block;
-}
-.cart .rate .stars i {
-  margin: -2px;
-}
-.cart .rate .stars i.not {
-  color: #dddddd;
-}
 .cart .rate .answers {
   color: #9a9a9a;
+}
+.stars {
+  margin-right: 10px;
+  display: inline-block;
+  width: 80px;
+}
+.stars i {
+  margin: -2px;
+}
+.stars i.not {
+  color: #dddddd;
 }
 footer {
   background: black;
@@ -465,6 +466,14 @@ footer .copyright a {
   box-shadow: none!important;
   background: black!important;
   color: white!important;
+}
+.border {
+  border: 1px solid black;
+}
+.btn-black {
+  padding: 12px 30px;
+  background: black;
+  color: white;
 }
 @media screen and (max-width: 991px) {
   .navbar-fixed-top .menu > li {
