@@ -23,7 +23,6 @@
     }
 }
 
-
 .product,
 .recommended {
     padding-bottom: 65px;
@@ -68,32 +67,67 @@
 
 .follow-us {
     background: url(../img/home/follow-back.png)no-repeat center;
+    background-size: 100% 100%;
     padding: 200px 0;
     .title {
         color: white;
     }
     .links {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
+        padding: 0 10%;
+        a {
+            width: 156px;
+            &:nth-child(2) {
+                text-align: center;
+            }
+            &:nth-child(3) {
+                text-align: right;
+            }
+        }
     }
 }
 
 .blog-lattest {
     padding: 100px 0;
     .item {
-        img {
+        .photo {
+            display: inline-block;
+            position: relative;
             margin-bottom: 15px;
+            .black {
+                position: absolute;
+                top: 0;
+                .size(100%);
+                background: rgba(0, 0, 0, .6);
+                opacity: 0;
+                .transition(opacity);
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            &:hover {
+                .black {
+                    opacity: 1;
+                }
+            }
+        }
+        img {
             display: block;
         }
         .date {
             color: @gray;
+            display: block;
         }
         .name {
             text-transform: uppercase;
             font-family: Oswald;
+            font-size: 14px;
+            margin-top: 8px;
+            margin-bottom: 15px;
         }
-        .description{
+        .description {
             margin: 15px 0;
         }
         .btn {
@@ -112,15 +146,15 @@
             }
         }
     }
-    .blog-lattest{
-        .item{
+    .blog-lattest {
+        .item {
             margin-bottom: 25px;
         }
     }
-    .follow-us{
+    .follow-us {
         padding: 100px 0;
     }
-    .blog-lattest{
+    .blog-lattest {
         padding: 50px 0;
     }
 }
@@ -144,38 +178,38 @@
                 margin-bottom: 10px;
             }
         }
-        .carousel{
+        .carousel {
             .carousel-control {
-                &.right{
+                &.right {
                     right: 0;
                 }
             }
         }
-        
     }
-    .follow-us{
+    .follow-us {
         padding: 50px 0;
-        .links{
+        .links {
             flex-direction: column;
-            a{
+            a {
                 margin-bottom: 15px;
+                width: auto;
             }
         }
     }
-    .blog-lattest{
+    .blog-lattest {
         padding: 25px 0;
-        .item{
+        .item {
             max-width: 400px;
-        margin: 15px auto;
+            margin: 15px auto;
         }
     }
-    footer{
+    footer {
         text-align: center;
         padding-top: 25px;
-        .menu-title{
+        .menu-title {
             margin-bottom: 15px;
         }
-        hr{
+        hr {
             margin-top: 15px;
         }
     }

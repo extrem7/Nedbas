@@ -1,15 +1,16 @@
 'use strict';
 
 const gulp = require('gulp'),
-    watch = require('gulp-watch'),
+    cleanCSS = require('gulp-clean-css'),
     prefixer = require('gulp-autoprefixer'),
     rigger = require('gulp-rigger'),
-    cleanCSS = require('gulp-clean-css'),
+    htmlmin = require('gulp-htmlmin'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     rimraf = require('rimraf'),
     gutil = require('gulp-util'),
     ftp = require('vinyl-ftp'),
+    watch = require('gulp-watch'),
     browserSync = require('browser-sync').create(),
     reload = browserSync.reload;
 
@@ -70,6 +71,9 @@ gulp.task('ftp:send', function () {
 gulp.task('html:build', function () {
     gulp.src(path.src.html)
         .pipe(rigger())
+        .pipe(htmlmin({
+            collapseWhitespace: true
+        }))
         .pipe(gulp.dest(path.build.html))
         .pipe(reload({
             stream: true

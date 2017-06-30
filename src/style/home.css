@@ -75,6 +75,7 @@
 }
 .follow-us {
   background: url(../img/home/follow-back.png) no-repeat center;
+  background-size: 100% 100%;
   padding: 200px 0;
 }
 .follow-us .title {
@@ -82,22 +83,55 @@
 }
 .follow-us .links {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 10%;
+}
+.follow-us .links a {
+  width: 156px;
+}
+.follow-us .links a:nth-child(2) {
+  text-align: center;
+}
+.follow-us .links a:nth-child(3) {
+  text-align: right;
 }
 .blog-lattest {
   padding: 100px 0;
 }
-.blog-lattest .item img {
+.blog-lattest .item .photo {
+  display: inline-block;
+  position: relative;
   margin-bottom: 15px;
+}
+.blog-lattest .item .photo .black {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.blog-lattest .item .photo .black:hover {
+  cursor: pointer;
+}
+.blog-lattest .item .photo:hover .black {
+  opacity: 1;
+}
+.blog-lattest .item img {
   display: block;
 }
 .blog-lattest .item .date {
   color: #9a9a9a;
+  display: block;
 }
 .blog-lattest .item .name {
   text-transform: uppercase;
   font-family: Oswald;
+  font-size: 14px;
+  margin-top: 8px;
+  margin-bottom: 15px;
 }
 .blog-lattest .item .description {
   margin: 15px 0;
@@ -155,6 +189,7 @@
   }
   .follow-us .links a {
     margin-bottom: 15px;
+    width: auto;
   }
   .blog-lattest {
     padding: 25px 0;

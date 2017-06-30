@@ -57,6 +57,9 @@ body {
 img {
   max-width: 100%;
 }
+h2 {
+  margin-top: 0;
+}
 .toggle-btn {
   z-index: 11;
   background: transparent;
@@ -139,7 +142,7 @@ header .menu,
 .navbar-fixed-top .menu {
   display: flex;
   justify-content: space-around;
-  align-items: baseline;
+  align-items: flex-end;
   font-size: 14px;
   text-align: center;
   text-transform: uppercase;
@@ -149,14 +152,16 @@ header .menu > li,
 .navbar-fixed-top .menu > li {
   transition: border-bottom 0.3s ease-in-out;
   height: 49px;
+  width: 100%;
 }
 header .menu > li:hover,
 .navbar-fixed-top .menu > li:hover {
   border-bottom: 1px solid black;
 }
-header .menu > li:last-child:hover,
-.navbar-fixed-top .menu > li:last-child:hover {
-  border: none;
+header .menu > li:last-child a,
+.navbar-fixed-top .menu > li:last-child a {
+  position: relative;
+  top: -5px;
 }
 header .menu > li > a,
 .navbar-fixed-top .menu > li > a {
@@ -322,10 +327,14 @@ header .dropdown-menu li.margin,
 .cart {
   text-align: center;
 }
+.cart:hover .photo .buy {
+  opacity: 1;
+}
 .cart .photo {
   margin-bottom: 10px;
   position: relative;
   color: white;
+  display: inline-block;
 }
 .cart .photo .buy {
   position: absolute;
@@ -337,7 +346,7 @@ header .dropdown-menu li.margin,
   transition: opacity 0.3s ease-in-out;
 }
 .cart .photo .buy:hover {
-  opacity: 1;
+  cursor: pointer;
 }
 .cart .photo .add-cart {
   position: absolute;
@@ -369,6 +378,8 @@ header .dropdown-menu li.margin,
 .cart .name {
   font-family: Oswald;
   text-transform: uppercase;
+  font-size: 14px;
+  margin-top: 13px;
 }
 .cart .price {
   margin: 5px 0;
@@ -427,7 +438,7 @@ footer ul i {
   font-size: 14px;
 }
 footer hr {
-  background-color: #9a9a9a;
+  border-top: 1px solid #1a1a1a;
   margin: 80px 0 0;
 }
 footer .copyright {
@@ -444,7 +455,7 @@ footer .copyright a {
   font-family: Oswald;
   font-size: 36px;
   letter-spacing: 0.05em;
-  margin-bottom: 80px;
+  margin-bottom: 100px;
   text-transform: uppercase;
   text-align: center;
 }
@@ -467,11 +478,19 @@ footer .copyright a {
   background: black!important;
   color: white!important;
 }
+.btn-hover {
+  transition: all 0.3s ease-in-out;
+  border: 4px solid black;
+}
+.btn-hover:hover {
+  background: white!important;
+  color: black!important;
+}
 .border {
   border: 1px solid black;
 }
 .btn-black {
-  padding: 12px 30px;
+  padding: 8px 26px;
   background: black;
   color: white;
 }
