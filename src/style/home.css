@@ -8,6 +8,7 @@
 .gender p {
   position: absolute;
   width: 100%;
+  padding-right: 30px;
   text-transform: uppercase;
   bottom: 25%;
   color: white;
@@ -111,13 +112,6 @@
   width: 100%;
   background: rgba(0, 0, 0, 0.6);
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-.blog-lattest .item .photo .black:hover {
-  cursor: pointer;
-}
-.blog-lattest .item .photo:hover .black {
-  opacity: 1;
 }
 .blog-lattest .item img {
   display: block;
@@ -160,29 +154,33 @@
 }
 @media screen and (max-width: 767px) {
   .gender {
-    padding: 25px 0;
+    padding: 75px 0;
   }
   .gender a:first-child img {
     margin-bottom: 15px;
   }
   .title {
-    margin-bottom: 25px;
+    margin-bottom: 55px;
     font-size: 30px;
   }
   .product,
   .recommended {
-    padding-bottom: 10px;
+    padding-bottom: 75px;
   }
   .product .category .btn,
   .recommended .category .btn {
     margin-bottom: 10px;
+  }
+  .product .carousel .carousel-control,
+  .recommended .carousel .carousel-control {
+    display: none;
   }
   .product .carousel .carousel-control.right,
   .recommended .carousel .carousel-control.right {
     right: 0;
   }
   .follow-us {
-    padding: 50px 0;
+    padding: 75px 0;
   }
   .follow-us .links {
     flex-direction: column;
@@ -192,7 +190,7 @@
     width: auto;
   }
   .blog-lattest {
-    padding: 25px 0;
+    padding: 75px 0;
   }
   .blog-lattest .item {
     max-width: 400px;

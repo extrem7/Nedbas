@@ -67,16 +67,13 @@ h2 {
   outline: none;
   width: 50px;
   display: none;
-  position: absolute;
-  right: 0px;
-  top: -2px;
 }
 .toggle-btn .icon-bar {
   display: block;
   width: 35px;
   margin-bottom: 4px;
   height: 5px;
-  background-color: white;
+  background-color: black;
   border-radius: 1px;
   position: relative;
   transition: all 0.3s ease-in-out;
@@ -138,6 +135,10 @@ header .mobile-logo {
   display: none;
   height: 94px;
 }
+header .menu li:last-child a {
+  position: relative;
+  top: -5px;
+}
 header .menu,
 .navbar-fixed-top .menu {
   display: flex;
@@ -157,11 +158,6 @@ header .menu > li,
 header .menu > li:hover,
 .navbar-fixed-top .menu > li:hover {
   border-bottom: 1px solid black;
-}
-header .menu > li:last-child a,
-.navbar-fixed-top .menu > li:last-child a {
-  position: relative;
-  top: -5px;
 }
 header .menu > li > a,
 .navbar-fixed-top .menu > li > a {
@@ -215,7 +211,7 @@ header .dropdown-menu,
   position: absolute;
   display: block;
   width: 341px;
-  margin-top: 1px;
+  margin-top: 2px;
   padding: 0;
   box-shadow: none;
   border: 0;
@@ -223,6 +219,7 @@ header .dropdown-menu,
   overflow: hidden;
   max-height: 0;
   transition: all 0.6s ease-in-out;
+  background: #f5f5f5;
 }
 header .dropdown-menu:hover,
 .navbar-fixed-top .dropdown-menu:hover,
@@ -295,6 +292,9 @@ header .dropdown-menu li.margin,
   margin: 0 15px;
   height: 44px;
 }
+.navbar-fixed-top .menu .dropdown-menu {
+  margin-top: 1px;
+}
 .navbar-fixed-top .left {
   display: inline-block;
 }
@@ -331,7 +331,6 @@ header .dropdown-menu li.margin,
   opacity: 1;
 }
 .cart .photo {
-  margin-bottom: 10px;
   position: relative;
   color: white;
   display: inline-block;
@@ -366,20 +365,24 @@ header .dropdown-menu li.margin,
   background: white;
   color: black;
 }
-.cart .photo .mdi-heart-outline {
+.cart .photo .heart {
   position: absolute;
   top: 2%;
   right: 5%;
-  font-size: 24px;
+  height: 20px;
+  width: 22px;
+  background: url(../img/heart-white.png);
+  transition: background 0.3s ease-in-out;
 }
-.cart .photo .mdi-heart-outline.active:before {
-  content: "\F2D1";
+.cart .photo .heart.active {
+  background: url(../img/heart-white-hover.png);
 }
 .cart .name {
   font-family: Oswald;
   text-transform: uppercase;
   font-size: 14px;
   margin-top: 13px;
+  font-weight: 400;
 }
 .cart .price {
   margin: 5px 0;
@@ -456,6 +459,7 @@ footer .copyright a {
   font-size: 36px;
   letter-spacing: 0.05em;
   margin-bottom: 100px;
+  margin-top: 0;
   text-transform: uppercase;
   text-align: center;
 }
@@ -494,6 +498,32 @@ footer .copyright a {
   background: black;
   color: white;
 }
+.shine-anim {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+.shine-anim:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -95%;
+  z-index: 2;
+  display: block;
+  width: 50%;
+  height: 100%;
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.3) 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.3)));
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.3) 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.3) 100%);
+  -webkit-transform: skewX(-25deg);
+  -ms-transform: skewX(-25deg);
+  transform: skewX(-25deg);
+}
+.shine-anim:hover:before {
+  -webkit-animation: shine .75s;
+  animation: shine .75s;
+}
 @media screen and (max-width: 991px) {
   .navbar-fixed-top .menu > li {
     margin: 0 8px;
@@ -508,6 +538,7 @@ footer .copyright a {
     height: auto;
   }
   header .top .links {
+    display: none;
     flex-direction: column;
     margin-top: 15px;
   }
@@ -515,6 +546,7 @@ footer .copyright a {
     margin-bottom: 15px;
   }
   header .top .social {
+    display: none;
     margin-bottom: 15px;
   }
   header .top .social a {
@@ -522,13 +554,14 @@ footer .copyright a {
   }
   header .top .lang {
     justify-content: center;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
   }
   header .top .lang .language {
     margin-left: 20px;
   }
   header .mobile-logo {
-    display: block;
+    display: none;
     margin: 15px auto;
   }
   header .logo,
@@ -579,4 +612,14 @@ footer .copyright a {
 }
 .cbalink {
   display: none !important;
+}
+@-webkit-keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
 }

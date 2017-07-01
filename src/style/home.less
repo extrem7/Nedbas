@@ -7,6 +7,7 @@
     p {
         position: absolute;
         width: 100%;
+        padding-right: 30px;
         text-transform: uppercase;
         bottom: 25%;
         color: white;
@@ -102,15 +103,6 @@
                 .size(100%);
                 background: rgba(0, 0, 0, .6);
                 opacity: 0;
-                .transition(opacity);
-                &:hover {
-                    cursor: pointer;
-                }
-            }
-            &:hover {
-                .black {
-                    opacity: 1;
-                }
             }
         }
         img {
@@ -161,18 +153,18 @@
 
 @media screen and (max-width: 767px) {
     .gender {
-        padding: 25px 0;
+        padding: 75px 0;
         a:first-child img {
             margin-bottom: 15px;
         }
     }
     .title {
-        margin-bottom: 25px;
+        margin-bottom: 55px;
         font-size: 30px;
     }
     .product,
     .recommended {
-        padding-bottom: 10px;
+        padding-bottom: 75px;
         .category {
             .btn {
                 margin-bottom: 10px;
@@ -180,6 +172,7 @@
         }
         .carousel {
             .carousel-control {
+                display: none;
                 &.right {
                     right: 0;
                 }
@@ -187,7 +180,7 @@
         }
     }
     .follow-us {
-        padding: 50px 0;
+        padding: 75px 0;
         .links {
             flex-direction: column;
             a {
@@ -197,7 +190,7 @@
         }
     }
     .blog-lattest {
-        padding: 25px 0;
+        padding: 75px 0;
         .item {
             max-width: 400px;
             margin: 15px auto;

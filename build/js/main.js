@@ -10,8 +10,8 @@ $('.category .btn').click(function () {
     $(this).addClass('active');
 });
 let button = false;
-$('header .toggle-btn').click(function () {
-    $('header .menu').slideToggle();
+$('.toggle-btn').click(function () {
+    $('.menu-mobile').slideToggle();
     if (button === false) {
         $(this).find('span:first-child').css({
             transform: "rotate(45deg)",
@@ -84,7 +84,7 @@ item_shop = {
                 scrollTop: $('.tabs').offset().top - 100
             }, 1500);
         })
-        $('.mdi-heart-outline').click(function (e) {
+        $('.heart').click(function (e) {
             e.preventDefault();
             $(this).toggleClass('active');
             //todo

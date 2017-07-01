@@ -9,15 +9,12 @@
     outline: none;
     width: 50px;
     display: none;
-    position: absolute;
-    right: 0px;
-    top: -2px;
     .icon-bar {
         display: block;
         width: 35px;
         margin-bottom: 4px;
         height: 5px;
-        background-color: white;
+        background-color: black;
         border-radius: 1px;
         position: relative;
         .transition(all);
@@ -84,6 +81,14 @@ header {
         display: none;
         height: 94px;
     }
+    .menu {
+        li:last-child {
+            a {
+                position: relative;
+                top: -5px;
+            }
+        }
+    }
 }
 
 header,
@@ -102,12 +107,6 @@ header,
             width: 100%;
             &:hover {
                 border-bottom: 1px solid black;
-            }
-            &:last-child {
-                a {
-                    position: relative;
-                    top: -5px;
-                }
             }
             &>a {
                 letter-spacing: 0.1em;
@@ -153,7 +152,7 @@ header,
         position: absolute;
         display: block;
         width: 341px;
-        margin-top: 1px;
+        margin-top: 2px;
         padding: 0;
         box-shadow: none;
         border: 0;
@@ -161,6 +160,7 @@ header,
         overflow: hidden;
         max-height: 0;
         transition: all .6s ease-in-out;
+        background: #f5f5f5;
         &:hover,
         &.open {
             max-height: 500px;
@@ -225,6 +225,9 @@ header,
             margin: 0 15px;
             height: 44px;
         }
+        .dropdown-menu {
+            margin-top: 1px;
+        }
     }
     .left {
         display: inline-block;
@@ -266,7 +269,6 @@ header,
         }
     }
     .photo {
-        margin-bottom: 10px;
         position: relative;
         color: white;
         display: inline-block;
@@ -299,13 +301,15 @@ header,
                 color: black;
             }
         }
-        .mdi-heart-outline {
+        .heart {
             position: absolute;
             top: 2%;
             right: 5%;
-            font-size: 24px;
-            &.active:before {
-                content: "\F2D1";
+            .size(22px, 20px);
+            background: url(../img/heart-white.png);
+            transition: background .3s ease-in-out;
+            &.active {
+                background: url(../img/heart-white-hover.png);
             }
         }
     }
@@ -314,6 +318,7 @@ header,
         text-transform: uppercase;
         font-size: 14px;
         margin-top: 13px;
+        font-weight: 400;
     }
     .price {
         margin: 5px 0;
@@ -396,6 +401,7 @@ footer {
     font-size: 36px;
     letter-spacing: 0.05em;
     margin-bottom: 100px;
+    margin-top: 0;
     text-transform: uppercase;
     text-align: center;
 }
@@ -420,10 +426,11 @@ footer {
         color: white!important;
     }
 }
-.btn-hover{
+
+.btn-hover {
     .transition(all);
-    border:4px solid black;
-    &:hover{
+    border: 4px solid black;
+    &:hover {
         background: white!important;
         color: black!important;
     }
@@ -437,6 +444,35 @@ footer {
     padding: 8px 26px;
     background: black;
     color: white;
+}
+
+.shine-anim {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.shine-anim:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -95%;
+    z-index: 2;
+    display: block;
+    width: 50%;
+    height: 100%;
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.3) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.3)));
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.3) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.3) 100%);
+    -webkit-transform: skewX(-25deg);
+    -ms-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+}
+
+.shine-anim:hover:before {
+    -webkit-animation: shine .75s;
+    animation: shine .75s;
 }
 
 @media screen and (max-width: 991px) {
@@ -460,6 +496,7 @@ footer {
                 }
             }
             .links {
+                display: none;
                 flex-direction: column;
                 margin-top: 15px;
                 a {
@@ -467,6 +504,7 @@ footer {
                 }
             }
             .social {
+                display: none;
                 margin-bottom: 15px;
                 a {
                     margin: 0 10px;
@@ -474,14 +512,15 @@ footer {
             }
             .lang {
                 justify-content: center;
-                margin-bottom: 15px;
+                margin-bottom: 10px;
+                margin-top: 10px;
                 .language {
                     margin-left: 20px;
                 }
             }
         }
         .mobile-logo {
-            display: block;
+            display: none;
             margin: 15px auto;
         }
     }
@@ -531,4 +570,16 @@ footer {
 
 .cbalink {
     display: none !important;
+}
+
+@-webkit-keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+
+@keyframes shine {
+    100% {
+        left: 125%;
+    }
 }
