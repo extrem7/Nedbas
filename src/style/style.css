@@ -295,6 +295,9 @@ header .dropdown-menu li.margin,
 .navbar-fixed-top .menu .dropdown-menu {
   margin-top: 1px;
 }
+.navbar-fixed-top .menu-mobile {
+  display: none;
+}
 .navbar-fixed-top .left {
   display: inline-block;
 }
