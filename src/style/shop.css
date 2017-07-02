@@ -297,7 +297,8 @@
   position: relative;
   top: 12px;
 }
-.single .item .description .buy .heart.active {
+.single .item .description .buy .heart.active,
+.single .item .description .buy .heart:hover {
   background: url(../img/heart.svg);
 }
 .single .item .description .additional {

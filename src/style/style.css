@@ -378,11 +378,12 @@ header .dropdown-menu li.margin,
   right: 6%;
   height: 20px;
   width: 22px;
-  background: url(../img/heart-white.png);
+  background: url(../img/heart-outline-w.svg);
   transition: background 0.3s ease-in-out;
 }
-.cart .photo .heart.active {
-  background: url(../img/heart-white-hover.png);
+.cart .photo .heart.active,
+.cart .photo .heart:hover {
+  background: url(../img/heart-w.svg);
 }
 .cart .name {
   font-family: Oswald;
