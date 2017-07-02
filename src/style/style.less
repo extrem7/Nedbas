@@ -92,7 +92,7 @@ header {
 }
 
 header,
-.navbar-fixed-top {
+.navbar {
     .menu {
         display: flex;
         justify-content: space-around;
@@ -197,7 +197,7 @@ header,
     }
 }
 
-.navbar-fixed-top {
+.navbar {
     background: white;
     display: none;
     padding-top: 5px;
@@ -261,7 +261,10 @@ header,
         }
     }
 }
-
+.navbar-fixed-top{
+    display: none;
+    margin-bottom: 0;
+}
 .cart {
     text-align: center;
     &:hover {
@@ -306,8 +309,8 @@ header,
         }
         .heart {
             position: absolute;
-            top: 2%;
-            right: 5%;
+            top: 4%;
+            right: 6%;
             .size(22px, 20px);
             background: url(../img/heart-white.png);
             transition: background .3s ease-in-out;
@@ -479,7 +482,7 @@ footer {
 }
 
 @media screen and (max-width: 991px) {
-    .navbar-fixed-top {
+    .navbar {
         .menu>li {
             margin: 0 8px;
         }
@@ -528,7 +531,7 @@ footer {
         }
     }
     header,
-    .navbar-fixed-top {
+    .navbar {
         .logo {
             display: none;
         }
@@ -555,8 +558,9 @@ footer {
             }
         }
     }
-    .navbar-fixed-top {
+    .navbar {
         padding: 10px 0;
+        display: block;
     }
     footer {
         text-align: center;

@@ -140,7 +140,7 @@ header .menu li:last-child a {
   top: -5px;
 }
 header .menu,
-.navbar-fixed-top .menu {
+.navbar .menu {
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
@@ -150,49 +150,49 @@ header .menu,
   margin-bottom: 0;
 }
 header .menu > li,
-.navbar-fixed-top .menu > li {
+.navbar .menu > li {
   transition: border-bottom 0.3s ease-in-out;
   height: 49px;
   width: 100%;
 }
 header .menu > li:hover,
-.navbar-fixed-top .menu > li:hover {
+.navbar .menu > li:hover {
   border-bottom: 1px solid black;
 }
 header .menu > li > a,
-.navbar-fixed-top .menu > li > a {
+.navbar .menu > li > a {
   letter-spacing: 0.1em;
 }
 header .menu li,
-.navbar-fixed-top .menu li {
+.navbar .menu li {
   position: relative;
 }
 header .menu .open-drop,
-.navbar-fixed-top .menu .open-drop {
+.navbar .menu .open-drop {
   cursor: pointer;
 }
 header .menu .open-drop:hover + .dropdown-menu,
-.navbar-fixed-top .menu .open-drop:hover + .dropdown-menu {
+.navbar .menu .open-drop:hover + .dropdown-menu {
   max-height: 500px;
 }
 header .menu .mdi-chevron-down,
-.navbar-fixed-top .menu .mdi-chevron-down {
+.navbar .menu .mdi-chevron-down {
   display: block;
   position: relative;
   top: -5px;
 }
 header .menu .mdi-account-outline,
-.navbar-fixed-top .menu .mdi-account-outline {
+.navbar .menu .mdi-account-outline {
   font-size: 20px;
   margin-right: 25px;
 }
 header .menu .mdi-cart-outline,
-.navbar-fixed-top .menu .mdi-cart-outline {
+.navbar .menu .mdi-cart-outline {
   font-size: 18px;
   position: relative;
 }
 header .menu .mdi-cart-outline span,
-.navbar-fixed-top .menu .mdi-cart-outline span {
+.navbar .menu .mdi-cart-outline span {
   font-style: normal;
   height: 16px;
   width: 16px;
@@ -207,7 +207,7 @@ header .menu .mdi-cart-outline span,
   line-height: 1.5;
 }
 header .dropdown-menu,
-.navbar-fixed-top .dropdown-menu {
+.navbar .dropdown-menu {
   position: absolute;
   display: block;
   width: 341px;
@@ -222,24 +222,24 @@ header .dropdown-menu,
   background: #f5f5f5;
 }
 header .dropdown-menu:hover,
-.navbar-fixed-top .dropdown-menu:hover,
+.navbar .dropdown-menu:hover,
 header .dropdown-menu.open,
-.navbar-fixed-top .dropdown-menu.open {
+.navbar .dropdown-menu.open {
   max-height: 500px;
 }
 header .dropdown-menu ul,
-.navbar-fixed-top .dropdown-menu ul {
+.navbar .dropdown-menu ul {
   display: inline-block;
   width: 170px;
   margin-bottom: 0;
   background: #f5f5f5;
 }
 header .dropdown-menu ul:nth-child(2),
-.navbar-fixed-top .dropdown-menu ul:nth-child(2) {
+.navbar .dropdown-menu ul:nth-child(2) {
   margin-left: -4px;
 }
 header .dropdown-menu li,
-.navbar-fixed-top .dropdown-menu li {
+.navbar .dropdown-menu li {
   transition: all 0.1s ease-in-out;
   height: 40px;
   display: flex;
@@ -248,72 +248,72 @@ header .dropdown-menu li,
   text-transform: none;
 }
 header .dropdown-menu li:hover,
-.navbar-fixed-top .dropdown-menu li:hover {
+.navbar .dropdown-menu li:hover {
   background: black;
   cursor: pointer;
   color: white;
 }
 header .dropdown-menu li.non-active,
-.navbar-fixed-top .dropdown-menu li.non-active {
+.navbar .dropdown-menu li.non-active {
   pointer-events: none;
   cursor: default !important;
 }
 header .dropdown-menu li.margin,
-.navbar-fixed-top .dropdown-menu li.margin {
+.navbar .dropdown-menu li.margin {
   padding-left: 50px;
 }
-.navbar-fixed-top {
+.navbar {
   background: white;
   display: none;
   padding-top: 5px;
 }
-.navbar-fixed-top img {
+.navbar img {
   height: 55px;
   display: inline-block;
   margin-right: 15px;
 }
-.navbar-fixed-top .container {
+.navbar .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.navbar-fixed-top .container:after,
-.navbar-fixed-top .container:before {
+.navbar .container:after,
+.navbar .container:before {
   display: none;
   clear: none;
 }
-.navbar-fixed-top .menu {
+.navbar .menu {
   display: inline-flex;
   position: relative;
   top: 5px;
   padding-bottom: 5px;
 }
-.navbar-fixed-top .menu > li {
+.navbar .menu > li {
   margin: 0 15px;
   height: 44px;
 }
-.navbar-fixed-top .menu .dropdown-menu {
+.navbar .menu .dropdown-menu {
   margin-top: 1px;
 }
-.navbar-fixed-top .menu-mobile {
+.navbar .menu-mobile {
   display: none;
 }
-.navbar-fixed-top .left {
+.navbar .left {
   display: inline-block;
 }
-.navbar-fixed-top .right {
+.navbar .right {
   float: right;
   display: inline-block;
 }
-.navbar-fixed-top .right .mdi-account-outline {
+.navbar .right .mdi-account-outline {
   font-size: 20px;
   margin-right: 25px;
 }
-.navbar-fixed-top .right .mdi-cart-outline {
+.navbar .right .mdi-cart-outline {
   font-size: 18px;
   position: relative;
 }
-.navbar-fixed-top .right .mdi-cart-outline span {
+.navbar .right .mdi-cart-outline span {
   font-style: normal;
   height: 16px;
   width: 16px;
@@ -326,6 +326,10 @@ header .dropdown-menu li.margin,
   font-size: 11px;
   line-height: 1.5;
   padding-left: 5px;
+}
+.navbar-fixed-top {
+  display: none;
+  margin-bottom: 0;
 }
 .cart {
   text-align: center;
@@ -370,8 +374,8 @@ header .dropdown-menu li.margin,
 }
 .cart .photo .heart {
   position: absolute;
-  top: 2%;
-  right: 5%;
+  top: 4%;
+  right: 6%;
   height: 20px;
   width: 22px;
   background: url(../img/heart-white.png);
@@ -528,7 +532,7 @@ footer .copyright a {
   animation: shine .75s;
 }
 @media screen and (max-width: 991px) {
-  .navbar-fixed-top .menu > li {
+  .navbar .menu > li {
     margin: 0 8px;
   }
 }
@@ -568,26 +572,26 @@ footer .copyright a {
     margin: 15px auto;
   }
   header .logo,
-  .navbar-fixed-top .logo {
+  .navbar .logo {
     display: none;
   }
   header .menu,
-  .navbar-fixed-top .menu {
+  .navbar .menu {
     flex-direction: column;
     align-items: center;
     margin: 15px;
     display: none;
   }
   header .menu li,
-  .navbar-fixed-top .menu li {
+  .navbar .menu li {
     margin-bottom: 15px;
   }
   header .menu li a.open-drop:hover + .dropdown-menu,
-  .navbar-fixed-top .menu li a.open-drop:hover + .dropdown-menu {
+  .navbar .menu li a.open-drop:hover + .dropdown-menu {
     max-height: initial;
   }
   header .dropdown-menu,
-  .navbar-fixed-top .dropdown-menu {
+  .navbar .dropdown-menu {
     position: relative;
     width: 100vw;
     margin-left: -45px;
@@ -595,11 +599,12 @@ footer .copyright a {
     display: none;
   }
   header .dropdown-menu ul,
-  .navbar-fixed-top .dropdown-menu ul {
+  .navbar .dropdown-menu ul {
     width: 49%;
   }
-  .navbar-fixed-top {
+  .navbar {
     padding: 10px 0;
+    display: block;
   }
   footer {
     text-align: center;
