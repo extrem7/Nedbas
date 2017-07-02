@@ -44,7 +44,7 @@ const config = {
         baseDir: "./build"
     },
     tunnel: true,
-    host: 'localhost',
+    host: 'nedbas',
     port: 9000,
     logPrefix: "Yurka"
 };
@@ -71,9 +71,9 @@ gulp.task('ftp:send', function () {
 gulp.task('html:build', function () {
     gulp.src(path.src.html)
         .pipe(rigger())
-        .pipe(htmlmin({
+        /*.pipe(htmlmin({
             collapseWhitespace: true
-        }))
+        }))*/
         .pipe(gulp.dest(path.build.html))
         .pipe(reload({
             stream: true
@@ -97,7 +97,7 @@ gulp.task('css:build', function () {
 
 gulp.task('image:build', function () {
     gulp.src(path.src.img)
-        .pipe(imagemin({
+        /*.pipe(imagemin({
             progressive: true,
             optimizationLevel: 10,
             svgoPlugins: [{
@@ -105,7 +105,7 @@ gulp.task('image:build', function () {
             }],
             use: [pngquant()],
             interlaced: true
-        }))
+        }))*/
         .pipe(gulp.dest(path.build.img))
         .pipe(reload({
             stream: true
