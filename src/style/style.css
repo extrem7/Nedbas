@@ -405,6 +405,42 @@ header .dropdown-menu li.margin,
 .cart .rate .answers {
   color: #9a9a9a;
 }
+.blog-item {
+  margin-bottom: 100px;
+}
+.blog-item .photo {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 15px;
+}
+.blog-item .photo .black {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+}
+.blog-item img {
+  display: block;
+}
+.blog-item .date {
+  color: #9a9a9a;
+  display: block;
+}
+.blog-item .name {
+  text-transform: uppercase;
+  font-family: Oswald;
+  font-size: 14px;
+  margin-top: 8px;
+  margin-bottom: 15px;
+}
+.blog-item .description {
+  margin: 15px 0;
+}
+.blog-item .btn {
+  padding: 9px 30px;
+}
 .stars {
   margin-right: 10px;
   display: inline-block;
@@ -536,6 +572,9 @@ footer .copyright a {
   .navbar .menu > li {
     margin: 0 8px;
   }
+  .blog-item {
+    margin-bottom: 50px;
+  }
 }
 @media screen and (max-width: 767px) {
   .toggle-btn {
@@ -606,6 +645,11 @@ footer .copyright a {
   .navbar {
     padding: 10px 0;
     display: block;
+  }
+  .blog-item {
+    margin: 0 auto 25px auto;
+    max-width: 400px;
+    text-align: center;
   }
   footer {
     text-align: center;

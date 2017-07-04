@@ -229,7 +229,7 @@ header,
             margin-top: 1px;
         }
     }
-    .menu-mobile{
+    .menu-mobile {
         display: none;
     }
     .left {
@@ -261,10 +261,12 @@ header,
         }
     }
 }
-.navbar-fixed-top{
+
+.navbar-fixed-top {
     display: none;
     margin-bottom: 0;
 }
+
 .cart {
     text-align: center;
     &:hover {
@@ -314,7 +316,8 @@ header,
             .size(22px, 20px);
             background: url(../img/heart-outline-w.svg);
             transition: background .3s ease-in-out;
-            &.active,&:hover {
+            &.active,
+            &:hover {
                 background: url(../img/heart-w.svg);
             }
         }
@@ -340,6 +343,42 @@ header,
         .answers {
             color: @gray;
         }
+    }
+}
+
+.blog-item {
+    margin-bottom: 100px;
+    .photo {
+        display: inline-block;
+        position: relative;
+        margin-bottom: 15px;
+        .black {
+            position: absolute;
+            top: 0;
+            .size(100%);
+            background: rgba(0, 0, 0, .6);
+            opacity: 0;
+        }
+    }
+    img {
+        display: block;
+    }
+    .date {
+        color: @gray;
+        display: block;
+    }
+    .name {
+        text-transform: uppercase;
+        font-family: Oswald;
+        font-size: 14px;
+        margin-top: 8px;
+        margin-bottom: 15px;
+    }
+    .description {
+        margin: 15px 0;
+    }
+    .btn {
+        padding: 9px 30px;
     }
 }
 
@@ -487,6 +526,9 @@ footer {
             margin: 0 8px;
         }
     }
+        .blog-item {
+        margin-bottom: 50px;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -561,6 +603,11 @@ footer {
     .navbar {
         padding: 10px 0;
         display: block;
+    }
+    .blog-item {
+        margin: 0 auto 25px auto;
+        max-width: 400px;
+        text-align: center;
     }
     footer {
         text-align: center;
