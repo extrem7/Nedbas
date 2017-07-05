@@ -1,0 +1,42 @@
+@import "ui";
+.main {
+    padding: 100px 0;
+    text-align: center;
+    .title{
+        line-height: 1;
+    }
+    input {
+        height: 30px;
+        display: block;
+        margin-bottom: 10px;
+        border: 1px solid black;
+        width: 100%;
+        text-indent: 10px;
+        &::-webkit-input-placeholder {
+            color: black;
+        }
+        &::-moz-placeholder {
+            color: black;
+        }
+        &:-ms-input-placeholder {
+            color: black;
+        }
+    }
+    .btn-black{
+        display: block;
+        margin: 0 auto 10px;
+        
+    }
+    .form{
+        margin-bottom: 25px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .main {
+        padding: 75px 0 25px;
+        .title {
+            margin-bottom: 50px;
+        }
+    }
+}

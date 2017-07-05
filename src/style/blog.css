@@ -2,9 +2,6 @@
 .blog {
   padding: 100px 0;
 }
-.blog h1 {
-  margin-bottom: 100px;
-}
 .blog .container {
   display: flex;
   flex-wrap: wrap;
@@ -36,11 +33,94 @@
   background: black;
   color: white;
 }
+.single {
+  padding: 100px 0 0;
+}
+.single .title {
+  margin-bottom: 0;
+}
+.single .item-date {
+  color: #9a9a9a;
+  text-align: center;
+  display: block;
+}
+.single img.big {
+  margin: 100px 0;
+}
+.single .content h2,
+.single .content h3,
+.single .content h4,
+.single .content h5,
+.single .content h6 {
+  font-family: Oswald;
+  margin-bottom: 25px;
+}
+.single .content h2 {
+  font-size: 28px;
+}
+.single .content h3 {
+  font-size: 22px;
+}
+.single .content h4 {
+  font-size: 18px;
+}
+.single .content h5 {
+  font-size: 16px;
+}
+.single .content h6 {
+  font-size: 14px;
+}
+.single .content p {
+  margin-bottom: 25px;
+}
+.single .social {
+  margin-top: 20px;
+  border-bottom: 1px solid #dddddd;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.single .social div {
+  margin: 0 auto;
+  padding: 0 60px;
+  align-items: center;
+  display: flex;
+  width: 250px;
+  position: relative;
+  top: 1px;
+  border-bottom: 1px solid black;
+}
+.single .social a {
+  font-size: 24px;
+  margin: 0 auto;
+}
+.single .social a:nth-child(2) {
+  font-size: 36px;
+}
+.single .read-also {
+  padding: 45px 0 0;
+}
+.single .read-also h2 {
+  font-size: 28px;
+  font-family: Oswald;
+  margin-bottom: 45px;
+  text-transform: uppercase;
+}
+.single .read-also .row {
+  display: flex;
+  flex-wrap: wrap;
+}
 @media screen and (max-width: 767px) {
   .blog {
     padding: 75px 0 25px;
   }
   .blog .title {
     margin-bottom: 50px;
+  }
+  .single {
+    padding: 75px 0 25px;
+  }
+  .single img.big {
+    margin: 25px 0;
   }
 }

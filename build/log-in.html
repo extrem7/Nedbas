@@ -233,56 +233,30 @@
                 <li><a href="">Контакты</a></li>
             </ul>
 </nav>
-<link rel="stylesheet" href="css/cart.css">
+<link rel="stylesheet" href="css/log-in.css">
 <div class="main">
-    <h1 class="title">Корзина</h1>
     <div class="container">
-        <div class="wrap">
-            <table>
-                <tr>
-                    <td>Товар</td>
-                    <td>Цена</td>
-                    <td>кол-во</td>
-                    <td>сумма</td>
-                </tr>
-                <tr>
-                    <td><img src="img/home/product-2.png" alt="">
-                        <div><h4 class="name">КОЖАНЫй ПОЯС-БАСКИ</h4>
-                            <span class="additional">Цвет: Черный<br>Размер: S</span>
-                        </div>
-                    </td>
-                    <td>690 грн.</td>
-                    <td><input type="number" value="1"></td>
-                    <td>690 грн.</td>
-                    <td><button><i class="mdi mdi-window-close"></i></button></td>
-                </tr>
-                <tr>
-                    <td><img src="img/home/product-2.png" alt="">
-                        <div><h4 class="name">КОЖАНЫй ПОЯС-БАСКИ</h4>
-                        </div>
-                    </td>
-                    <td>690 грн.</td>
-                    <td><input type="number" value="1"></td>
-                    <td>690 грн.</td>
-                    <td><button><i class="mdi mdi-window-close"></i></button></td>
-                </tr>
-            </table>
-        </div>
-        <div class="operations">
-            <button class="left">Обновить корзину</button>
-            <div class="right">
-                <div class="sum">Сумма заказа: 2040 грн.</div>
-                <button class="btn-black btn-hover">Оформить покупку</button>
+        <div class="col-md-5 col-sm-6">
+            <div class="log-in">
+                <h1 class="title">Вход для клиента</h1>
+                <div class="form">
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Пароль">
+                    <button class="btn-black btn-hover">Войти</button>
+                    <a href="">Забыли свой пароль?</a>
+                </div>
             </div>
         </div>
-        <div class="promo">
-           <div class="line">
-            <p>У Вас есть скидочный купон?</p>
-            <div class="gray-line"></div>
-            </div>
-            <div class="form">
-                <input type="text" class="border" placeholder="Введите код купона">
-                <button class="btn-black btn-hover">Применить купон</button>
+        <div class="col-md-5 col-md-offset-2 col-sm-6">
+            <div class="sign-up">
+                <p class="title">регистрация</p>
+                <div class="form">
+                    <input type="text" placeholder="Имя">
+                    <input type="text" placeholder="Фамилия">
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Пароль">
+                    <button class="btn-black btn-hover">Зарегистрироваться</button>
+                </div>
             </div>
         </div>
     </div>

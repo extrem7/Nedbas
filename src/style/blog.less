@@ -1,9 +1,6 @@
 @import "ui";
 .blog {
     padding: 100px 0;
-    h1 {
-        margin-bottom: 100px;
-    }
     .container {
         display: flex;
         flex-wrap: wrap;
@@ -36,11 +33,97 @@
     }
 }
 
+.single {
+    padding: 100px 0 0;
+    .title {
+        margin-bottom: 0;
+    }
+    .item-date {
+        color: @gray;
+        text-align: center;
+        display: block;
+    }
+    img.big {
+        margin: 100px 0;
+    }
+    .content {
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: Oswald;
+            margin-bottom: 25px;
+        }
+        h2 {
+            font-size: 28px;
+        }
+        h3 {
+            font-size: 22px;
+        }
+        h4 {
+            font-size: 18px;
+        }
+        h5 {
+            font-size: 16px;
+        }
+        h6 {
+            font-size: 14px;
+        }
+        p {
+            margin-bottom: 25px;
+        }
+    }
+    .social {
+        margin-top: 20px;
+        border-bottom: 1px solid #dddddd;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        div {
+            margin: 0 auto;
+            padding: 0 60px;
+            align-items: center;
+            display: flex;
+            width: 250px;
+            position: relative;
+            top: 1px;
+            border-bottom: 1px solid black;
+        }
+        a {
+            font-size: 24px;
+            margin: 0 auto;
+            &:nth-child(2) {
+                font-size: 36px;
+            }
+        }
+    }
+    .read-also {
+        padding: 45px 0 0;
+        h2 {
+            font-size: 28px;
+            font-family: Oswald;
+            margin-bottom: 45px;
+            text-transform: uppercase;
+        }
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}
+
 @media screen and (max-width: 767px) {
     .blog {
         padding: 75px 0 25px;
         .title {
             margin-bottom: 50px;
+        }
+    }
+    .single {
+        padding: 75px 0 25px;
+        img.big {
+            margin: 25px 0;
         }
     }
 }

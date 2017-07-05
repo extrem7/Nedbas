@@ -26,6 +26,7 @@
                     .name {
                         font-family: Oswald;
                         text-transform: uppercase;
+                        font-size: 14px;
                     }
                     .additional {
                         color: @gray;
@@ -83,6 +84,8 @@
     }
     .operations {
         margin-top: 25px;
+        height: 46px;
+        margin-bottom: 50px;
         .left {
             display: inline-block;
             float: left;
@@ -101,8 +104,79 @@
                 background-color: whitesmoke;
                 padding: 13px 15px;
             }
-            .btn-black{
+            .btn-black {
                 height: 46px;
+            }
+        }
+    }
+    .promo {
+        .line {
+            display: flex;
+            align-items: stretch;
+            margin-bottom: 15px;
+            p {
+                font-family: Oswald;
+                text-transform: uppercase;
+                padding: 0 15px 10px;
+                border-bottom: 1px solid black;
+            }
+            .gray-line {
+                border-bottom: 1px solid #dddddd;
+                width: 333px;
+            }
+        }
+        .form {
+            input {
+                height: 44px;
+                width: 260px;
+                text-indent: 15px;
+                margin-right: -4px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    .main {
+        padding: 75px 0 50px;
+        .title{
+            margin-bottom: 50px;
+        }
+        .wrap{
+            overflow-x: scroll;
+            table{
+                width: 767px;
+            }
+        }
+        .operations {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 138px;
+            .left {
+                margin-bottom: 15px;
+                min-height: 46px;
+            }
+            .right {
+                min-height: 92px;
+                flex-direction: column;
+            }
+        }
+        .promo{
+            .line{
+                justify-content: center;
+                .gray-line{
+                    display: none;
+                }
+            }
+            .form{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                input{
+                    width: 173px;
+                    margin-right: 0;
+                }
             }
         }
     }

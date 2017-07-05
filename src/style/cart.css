@@ -30,6 +30,7 @@
 .main table tr:nth-child(n+2) td:first-child .name {
   font-family: Oswald;
   text-transform: uppercase;
+  font-size: 14px;
 }
 .main table tr:nth-child(n+2) td:first-child .additional {
   color: #9a9a9a;
@@ -82,6 +83,8 @@
 }
 .main .operations {
   margin-top: 25px;
+  height: 46px;
+  margin-bottom: 50px;
 }
 .main .operations .left {
   display: inline-block;
@@ -105,4 +108,68 @@
 }
 .main .operations .right .btn-black {
   height: 46px;
+}
+.main .promo .line {
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 15px;
+}
+.main .promo .line p {
+  font-family: Oswald;
+  text-transform: uppercase;
+  padding: 0 15px 10px;
+  border-bottom: 1px solid black;
+}
+.main .promo .line .gray-line {
+  border-bottom: 1px solid #dddddd;
+  width: 333px;
+}
+.main .promo .form input {
+  height: 44px;
+  width: 260px;
+  text-indent: 15px;
+  margin-right: -4px;
+}
+@media screen and (max-width: 767px) {
+  .main {
+    padding: 75px 0 50px;
+  }
+  .main .title {
+    margin-bottom: 50px;
+  }
+  .main .wrap {
+    overflow-x: scroll;
+  }
+  .main .wrap table {
+    width: 767px;
+  }
+  .main .operations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 138px;
+  }
+  .main .operations .left {
+    margin-bottom: 15px;
+    min-height: 46px;
+  }
+  .main .operations .right {
+    min-height: 92px;
+    flex-direction: column;
+  }
+  .main .promo .line {
+    justify-content: center;
+  }
+  .main .promo .line .gray-line {
+    display: none;
+  }
+  .main .promo .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main .promo .form input {
+    width: 173px;
+    margin-right: 0;
+  }
 }
