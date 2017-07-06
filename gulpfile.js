@@ -43,7 +43,7 @@ const config = {
     server: {
         baseDir: "./build"
     },
-    tunnel: true,
+    tunnel: false,
     host: 'nedbas',
     port: 9000,
     logPrefix: "Yurka"
@@ -82,13 +82,13 @@ gulp.task('html:build', function () {
 
 gulp.task('css:build', function () {
     gulp.src(path.src.style)
-        .pipe(prefixer({
+       /* .pipe(prefixer({
             browsers: ['last 2 versions'],
             cascade: false
         }))
         .pipe(cleanCSS({
             compatibility: 'ie8'
-        }))
+        }))*/
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({
             stream: true

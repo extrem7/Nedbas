@@ -52,10 +52,15 @@
                     justify-content: center;
                     align-items: center;
                     background: #f5f5f5;
+                    padding-left: 0;
                     button {
                         background: none;
                         font-size: 18px;
                         color: #9a9a9a;
+                        .transition(color);
+                        &:hover{
+                            color: #cb1515;
+                        }
                     }
                 }
             }

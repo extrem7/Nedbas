@@ -1,1 +1,62 @@
-a,a:active,a:focus,a:link,a:visited{color:inherit;-webkit-transition:color .2s ease-in-out;transition:color .2s ease-in-out;text-decoration:none}a:active:hover,a:focus:hover,a:hover,a:link:hover,a:visited:hover{color:inherit;text-decoration:none}a,button,input,textarea{border:none;outline:0!important}ul{padding:0}ul li{list-style:none}p{cursor:default;margin-bottom:0}html{width:100vw;overflow-x:hidden}body{width:100vw;overflow-x:hidden;font-family:Liberation;color:#000}img{max-width:100%}h2{margin-top:0}
+a,
+a:link,
+a:visited,
+a:active,
+a:focus {
+  color: inherit;
+  transition: color 0.2s ease-in-out;
+  text-decoration: none;
+}
+a:hover,
+a:link:hover,
+a:visited:hover,
+a:active:hover,
+a:focus:hover {
+  color: inherit;
+  text-decoration: none;
+}
+button,
+input,
+textarea,
+a {
+  border: none;
+  outline: none !important;
+}
+ul {
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+p {
+  cursor: default;
+  margin-bottom: 0;
+}
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  font-family: Liberation;
+  color: black;
+}
+img {
+  max-width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin-top: 0;
+}
+.flexthis.container:before,
+.flexthis.container:after,
+.flexthis.row:before,
+.flexthis.row:after {
+  content: normal;
+}

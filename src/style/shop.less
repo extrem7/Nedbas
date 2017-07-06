@@ -154,9 +154,6 @@
             }
             ul {
                 display: inline-block;
-                &:nth-child(3) {
-                    margin-left: 30px;
-                }
             }
             li {
                 margin-bottom: 2px;
@@ -214,14 +211,13 @@
             .color {
                 ul {
                     max-height: 175px;
+                    width: 45%;
                 }
             }
             .size {
                 ul {
                     max-height: 120px;
-                    &:nth-child(3) {
-                        margin-left: 60px;
-                    }
+                    width: 45%;
                 }
             }
         }
@@ -479,13 +475,6 @@
         padding: 100px 0 0;
         
     }
-}
-
-.flexthis.container:before,
-.flexthis.container:after,
-.flexthis.row:before,
-.flexthis.row:after {
-   content: normal; // IE doesn't support `initial`
 }
 
 @media screen and (max-width:1200px) {
