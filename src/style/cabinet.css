@@ -1,0 +1,20 @@
+.sidebar {
+  background-color: #f5f5f5;
+  padding: 25px;
+}
+.sidebar p {
+  text-align: center;
+  font-family: Oswald;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+.sidebar ul li {
+  margin-bottom: 20px;
+}
+.main {
+  padding: 100px 0;
+}
+.console a {
+  text-decoration: underline;
+}

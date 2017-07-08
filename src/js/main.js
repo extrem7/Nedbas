@@ -10,7 +10,7 @@ const navbar = {
                     if (screen.width > 767) {
                         $('.navbar').slideDown();
                     } else {
-                        $('.catalog , .single , .slider').css({
+                        $('nav').next().next().css({
                             paddingTop: 75 + 97
                         });
 
@@ -22,7 +22,7 @@ const navbar = {
                         $('.navbar').slideUp();
                     } else {
                         $('.navbar').removeClass('navbar-fixed-top');
-                        $('.catalog , .single , .slider').css({
+                        $('nav').next().next().css({
                             paddingTop: 75
                         });
                     }
@@ -87,34 +87,34 @@ const navbar = {
                 //todo
             })
         }
-    }
-item_shop = {
-    controller: function () {
-        $('.miniatures img').click(function () {
-            let src = $(this).attr('src');
-            $('.big').fadeOut('fast', function () {
-                $(this).attr('src', src);
-                $(this).fadeIn();
+    },
+    item_shop = {
+        controller: function () {
+            $('.miniatures img').click(function () {
+                let src = $(this).attr('src');
+                $('.big').fadeOut('fast', function () {
+                    $(this).attr('src', src);
+                    $(this).fadeIn();
+                })
+            });
+            $('.item .head .answers').click(function (e) {
+                e.preventDefault();
+                $('.tabs .controll a[href="#answers"]').click();
+                $('body').animate({
+                    scrollTop: $('.tabs').offset().top - 100
+                }, 1500);
             })
-        });
-        $('.item .head .answers').click(function (e) {
-            e.preventDefault();
-            $('.tabs .controll a[href="#answers"]').click();
-            $('body').animate({
-                scrollTop: $('.tabs').offset().top - 100
-            }, 1500);
-        })
-        $('.heart').click(function (e) {
-            e.preventDefault();
-            $(this).toggleClass('active');
-            //todo
-        });
-        $('.form i').click(function () {
-            $('form i').removeClass('active');
-            $(this).addClass('active').prevAll().addClass('active');
-        })
-    }
-};
+            $('.heart').click(function (e) {
+                e.preventDefault();
+                $(this).toggleClass('active');
+                //todo
+            });
+            $('.form i').click(function () {
+                $('form i').removeClass('active');
+                $(this).addClass('active').prevAll().addClass('active');
+            })
+        }
+    };
 navbar.controller();
 item_catalog.controller();
 filter_category.controller();

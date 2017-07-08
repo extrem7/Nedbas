@@ -10,28 +10,6 @@
 .blog .container:after {
   content: normal;
 }
-.blog .paggination {
-  text-align: center;
-}
-.blog .paggination .btn {
-  height: 25px;
-  width: 25px;
-  transition: all 0.3s ease-in-out;
-  padding: 0;
-  margin: 0 -2px;
-  border: none;
-  font-size: 14px;
-  padding-top: 3px;
-}
-.blog .paggination .btn.current {
-  background-color: #ddd!important;
-  color: black!important;
-  pointer-events: none;
-}
-.blog .paggination .btn:hover {
-  background: black;
-  color: white;
-}
 .single {
   padding: 100px 0 0;
 }
