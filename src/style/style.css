@@ -71,6 +71,9 @@ h6 {
 .flexthis.row:after {
   content: normal;
 }
+label {
+  font-weight: normal;
+}
 .toggle-btn {
   z-index: 11;
   background: transparent;

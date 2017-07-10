@@ -134,6 +134,14 @@
   text-indent: 15px;
   margin-right: -4px;
 }
+@media screen and (max-width: 991px) {
+  .wishlist .sidebar {
+    margin-top: 50px;
+  }
+  .wishlist .col-md-3 {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 767px) {
   .main {
     padding: 75px 0 50px;
