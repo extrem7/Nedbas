@@ -1,11 +1,1 @@
-@font-face {
-  font-family: Oswald;
-  src: url(../fonts/Oswald-Regular.ttf);
-  font-weight: normal;
-}
-@font-face {
-  font-family: Liberation;
-  src: url(../fonts/LiberationSans-Regular.ttf);
-  font-weight: normal;
-  letter-spacing: 0.025em;
-}
+@font-face{font-family:Oswald;src:url(../fonts/Oswald-Regular.ttf);font-weight:400}@font-face{font-family:Liberation;src:url(../fonts/LiberationSans-Regular.ttf);font-weight:400;letter-spacing:.025em}

@@ -12,9 +12,16 @@
   }
   ul {
     li {
-      margin-bottom: 20px;
       a {
         text-decoration: none;
+        padding: 10px 14px;
+        height: 40px;
+        display: block;
+        .transition(all);
+        &:hover {
+          background: black;
+          color: white;
+        }
       }
     }
   }
@@ -31,47 +38,49 @@
 }
 
 .personal-data {
-  input {
-    height: 30px;
-    margin-bottom: 15px;
-    margin-top: 5px;
-    border: 1px solid black;
-    width: 100%;
-    text-indent: 10px;
-    display: block;
-    &::-webkit-input-placeholder {
-      color: black;
+  .form {
+    input {
+      height: 30px;
+      margin-bottom: 15px;
+      margin-top: 5px;
+      border: 1px solid black;
+      width: 100%;
+      text-indent: 10px;
+      display: block;
+      &::-webkit-input-placeholder {
+        color: black;
+      }
+      &::-moz-placeholder {
+        color: black;
+      }
+      &:-ms-input-placeholder {
+        color: black;
+      }
     }
-    &::-moz-placeholder {
-      color: black;
-    }
-    &:-ms-input-placeholder {
-      color: black;
-    }
-  }
-  label {
-    width: 100%;
-    span {
-      color: @red;
-    }
-  }
-  p {
-    text-transform: uppercase;
-    font-size: 18px;
-    font-family: Oswald;
-    margin-bottom: 15px;
-  }
-  .name {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     label {
-      width: 48%;
-
+      width: 100%;
+      span {
+        color: @red;
+      }
     }
-  }
-  .pass {
-    margin: 35px 0 45px;
+    p {
+      text-transform: uppercase;
+      font-size: 18px;
+      font-family: Oswald;
+      margin-bottom: 15px;
+    }
+    .name {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      label {
+        width: 48%;
+
+      }
+    }
+    .pass {
+      margin: 35px 0 45px;
+    }
   }
 }
 
@@ -291,12 +300,12 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    margin-bottom: 5px;
     .left {
       display: flex;
     }
   }
   .stars {
-    margin-left: 15px;
     margin-right: 0;
   }
   .name {
@@ -370,7 +379,7 @@
         flex-direction: column;
         align-items: center;
         margin-bottom: 10px;
-        .left{
+        .left {
           flex-direction: column;
         }
         .name,

@@ -82,13 +82,13 @@ gulp.task('html:build', function () {
 
 gulp.task('css:build', function () {
     gulp.src(path.src.style)
-       /* .pipe(prefixer({
+        .pipe(prefixer({
             browsers: ['last 2 versions'],
             cascade: false
         }))
         .pipe(cleanCSS({
             compatibility: 'ie8'
-        }))*/
+        }))
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({
             stream: true
@@ -97,7 +97,7 @@ gulp.task('css:build', function () {
 
 gulp.task('image:build', function () {
     gulp.src(path.src.img)
-        /*.pipe(imagemin({
+        .pipe(imagemin({
             progressive: true,
             optimizationLevel: 10,
             svgoPlugins: [{
@@ -105,7 +105,7 @@ gulp.task('image:build', function () {
             }],
             use: [pngquant()],
             interlaced: true
-        }))*/
+        }))
         .pipe(gulp.dest(path.build.img))
         .pipe(reload({
             stream: true

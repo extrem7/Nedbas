@@ -9,11 +9,16 @@
   margin-top: 0;
   margin-bottom: 40px;
 }
-.sidebar ul li {
-  margin-bottom: 20px;
-}
 .sidebar ul li a {
   text-decoration: none;
+  padding: 10px 14px;
+  height: 40px;
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+.sidebar ul li a:hover {
+  background: black;
+  color: white;
 }
 .main {
   padding: 100px 0;
@@ -21,7 +26,7 @@
 .console a {
   text-decoration: underline;
 }
-.personal-data input {
+.personal-data .form input {
   height: 30px;
   margin-bottom: 15px;
   margin-top: 5px;
@@ -30,36 +35,36 @@
   text-indent: 10px;
   display: block;
 }
-.personal-data input::-webkit-input-placeholder {
+.personal-data .form input::-webkit-input-placeholder {
   color: black;
 }
-.personal-data input::-moz-placeholder {
+.personal-data .form input::-moz-placeholder {
   color: black;
 }
-.personal-data input:-ms-input-placeholder {
+.personal-data .form input:-ms-input-placeholder {
   color: black;
 }
-.personal-data label {
+.personal-data .form label {
   width: 100%;
 }
-.personal-data label span {
+.personal-data .form label span {
   color: #cb1515;
 }
-.personal-data p {
+.personal-data .form p {
   text-transform: uppercase;
   font-size: 18px;
   font-family: Oswald;
   margin-bottom: 15px;
 }
-.personal-data .name {
+.personal-data .form .name {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.personal-data .name label {
+.personal-data .form .name label {
   width: 48%;
 }
-.personal-data .pass {
+.personal-data .form .pass {
   margin: 35px 0 45px;
 }
 .wishlist table {
@@ -263,12 +268,12 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  margin-bottom: 5px;
 }
 .testimonials .head .left {
   display: flex;
 }
 .testimonials .stars {
-  margin-left: 15px;
   margin-right: 0;
 }
 .testimonials .name {
